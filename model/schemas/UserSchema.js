@@ -16,6 +16,28 @@ const usuariosEsquema = new mongoose.Schema(
       type: String,
       require: true,
     },
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user",
+    },
+    voluntari: {
+      type: Boolean,
+      default: false,
+    },
+    dni: {
+      type: Number,
+      unique: true,
+    },
+    address: {
+      type: String,
+    },
+    tel: {
+      type: Number,
+    },
+    fNacimiento: {
+      type: Date,
+    },
   },
   {
     timestamps: true,

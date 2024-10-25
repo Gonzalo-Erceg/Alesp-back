@@ -1,8 +1,84 @@
+### Crear usuario
 POST http://localhost:3000/user/register
 content-type: application/json
 
 {
-    "username":"Gonzalo Erceg",
-    "email":"gonzalo@hotmail.com",
+    "username":"Gonzalo ",
+    "email":"caleste@admin.com",
     "password":"123"
+}
+
+
+### Login admin
+POST http://localhost:3000/user/login
+content-type: application/json
+
+{
+    
+    "email":"admin@admin.com",
+    "password":"123"
+}
+
+
+### Iniciar sesion - setea una coockie de sesion
+
+
+
+
+
+POST http://localhost:3000/user/login
+content-type: application/json
+
+{
+    
+    "email":"erceg@admin.com",
+    "password":"123"
+}
+
+### obtener donacion del usuairo
+
+GET http://localhost:3000/donation/
+
+
+
+### Crear donacion
+
+POST http://localhost:3000/donation/
+content-type: application/json
+
+
+{
+    "amount":200
+}
+
+
+### Admin - obtener todos los registros de donaciones
+GET http://localhost:3000/donation/all
+
+
+
+### Modificar habilitar a voluntario
+PATCH  http://localhost:3000/user/
+content-type: application/json
+
+{
+    "voluntari":true
+}
+
+
+
+### recuperrar articulos
+GET http://localhost:3000/article/
+
+
+### Recuperar un articulo
+GET http://localhost:3000/article/671bac309f2a92edb1c73bf8
+
+
+### Crear comentario
+POST http://localhost:3000/article/671bac309f2a92edb1c73bf8
+content-type: application/json
+
+{
+    "comment":"comentario mega epico"
 }
