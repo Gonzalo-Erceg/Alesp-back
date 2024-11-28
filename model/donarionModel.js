@@ -29,6 +29,7 @@ const createDonations = async (userID, amount) => {
 const getUserDonations = async (userID) => {
   try {
     const donations = await DonationModel.find({ user: userID });
+    console.log(donations)
     return donations;
   } catch (e) {
     throw e;

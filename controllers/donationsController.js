@@ -5,7 +5,7 @@ import {
 } from "../model/donarionModel.js";
 
 const getUserDonation = async (req, res) => {
-  const userID = req.user._id;
+  const userID = req.user.id;
 
   try {
     const donaciones = await getUserDonations(userID);
@@ -16,9 +16,9 @@ const getUserDonation = async (req, res) => {
 };
 
 const createDonation = async (req, res) => {
-  const userID = req.user._id;
+  const userID = req.user.id;
   const amount = req.body.amount;
-
+console.log(req.body)
   try {
     const newDonation = createDonations(userID, amount);
 

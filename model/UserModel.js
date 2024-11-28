@@ -49,9 +49,7 @@ const revisarPassword = async (usuario, password) => {
   }
 };
 const updateUser = async (userID, modifie) => {
-  if (modifie.rol) {
-    delete modifie.rol;
-  }
+  console.log("hola")
 
   try {
     const user = await UserModel.findByIdAndUpdate(userID, { $set: modifie });

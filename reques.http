@@ -1,21 +1,21 @@
 ### Crear usuario
-POST http://localhost:3000/user/register
+POST https://alesp-back.onrender.com/user/register
 content-type: application/json
 
 {
     "username":"Gonzalo ",
-    "email":"caleste@admin.com",
+    "email":"gonzalo@erceg.com",
     "password":"123"
 }
 
 
 ### Login admin
-POST http://localhost:3000/user/login
+POST https://alesp-back.onrender.com/user/login
 content-type: application/json
 
 {
     
-    "email":"admin@admin.com",
+    "email":"gonzalo@admin.com",
     "password":"123"
 }
 
